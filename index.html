@@ -409,22 +409,31 @@
 
 <section class="section" id="ImageComparison">
   <div class="container is-max-desktop content">
-    <!-- <p class="has-text-centered">
-      向左右拖拽中间的滑块，直观对比原始退化底片与 AI 模型提取出的真实星象特征。
-    </p> -->
-    <div style="position: relative; margin-top: 30px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-      <div style="position: absolute; top: 20px; left: 20px; z-index: 10; background-color: rgba(128, 128, 128, 0.5); color: white; padding: 4px 12px; border-radius: 4px; font-weight: bold; font-size: 0.9em; pointer-events: none;">
-        Raw Plate
+    
+    <figure style="margin: 0;">
+      
+      <div style="position: relative; margin-top: 30px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <div style="position: absolute; top: 20px; left: 20px; z-index: 10; background-color: rgba(128, 128, 128, 0.5); color: white; padding: 4px 12px; border-radius: 4px; font-weight: bold; font-size: 0.9em; pointer-events: none;">
+          Raw Plate
+        </div>
+        <div style="position: absolute; top: 20px; right: 20px; z-index: 10; background-color: rgba(128, 128, 128, 0.5); color: white; padding: 4px 12px; border-radius: 4px; font-weight: bold; font-size: 0.9em; pointer-events: none;">
+          DESI
+        </div>
+        
+        <img-comparison-slider hover="hover">
+          <img slot="first" src="./static/images/plate.png" alt="原始退化底片" style="width: 100%; display: block;" />
+          <img slot="second" src="./static/images/desi.png" alt="AI配准与提取结果" style="width: 100%; display: block;" />
+        </img-comparison-slider>
       </div>
-      <div style="position: absolute; top: 20px; right: 20px; z-index: 10; background-color: rgba(128, 128, 128, 0.5); color: white; padding: 4px 12px; border-radius: 4px; font-weight: bold; font-size: 0.9em; pointer-events: none;">
-        DESI
-      </div>
-      <img-comparison-slider>
-        <img slot="first" src="./static/images/plate.png" alt="原始退化底片" style="width: 100%; display: block;" />
-        <img slot="second" src="./static/images/desi.png" alt="AI配准与提取结果" style="width: 100%; display: block;" />
-      </img-comparison-slider>
-    </div>
-    <h2 class="title has-text-centered">Astronomical Digital Plate Image Calibration</h2>
+
+      <figcaption style="margin-top: 15px; text-align: justify; font-size: 0.95em; color: #555;">
+        <h2 class="title is-4 has-text-centered" style="margin-bottom: 10px; color: #333;">Astronomical Digital Plate Image Calibration</h2>
+        <strong style="font-weight: bold; color: #333;">Left (Raw Plate):</strong> The original historical digital plate.
+        <strong style="font-weight: bold; color: #333;">Right (DESI):</strong> Precisely locates genuine stellar sources for astrometric registration.
+      </figcaption>
+
+    </figure>
+
   </div>
 </section>
 
