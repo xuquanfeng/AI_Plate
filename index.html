@@ -6,7 +6,7 @@
   
   <!-- Primary Meta Tags -->
   <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
+  <meta name="title" content="AI_Plate - Xuquanfeng">
   <!-- TODO: Write a compelling 150-160 character description of your research -->
   <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
   <!-- TODO: Add 5-10 relevant keywords for your research area -->
@@ -74,7 +74,7 @@
 
 
   <!-- TODO: Replace with your paper title and authors -->
-  <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
+  <title>AI_Plate - Xuquanfeng | RAA</title>
   
   <!-- Favicon and App Icons -->
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
@@ -375,9 +375,11 @@
   <div class="container is-max-desktop">
     
     <h2 class="title is-3">Background & Motivation</h2>
-    <p  class="title is-6">
+    <div class="content has-text-justified is-size-5" style="margin-bottom: 30px;">
+    <p>
       Astronomical plates are some of the most significant observational tools of twentieth-century astronomy, offering long-term sky surveys that modern surveys cannot match. Since 1900, China has systematically gathered nighttime astronomical plates, building a substantial historical dataset. Although these fragile materials have been digitized with high accuracy, they need to be astrometrically registered by cross-matching detected stellar sources with modern reference catalogs such as Gaia to be scientifically useful.
     </p>
+  </div>
 
   </div>
 </section>
@@ -386,16 +388,22 @@
   <div class="container is-max-desktop">
     
     <h2 class="title is-3">Astrometric registration workflow</h2>
-    <p  class="title is-6">
+    
+    <div class="content has-text-justified is-size-5" style="margin-bottom: 30px;">
+    <p>
       The astrometric registration of the digitized plates consists of three main steps: source extraction, stellar source classification, and astrometric matching.
     </p>
+    </div>
     
     <figure class="has-text-centered" style="margin-top: 30px;">
       <img src="./static/images/traditional_method.png" alt="traditional method workflow" style="max-width: 100%; border-radius: 8px;">
     </figure>
+    
+    <div class="content has-text-justified is-size-5" style="margin-bottom: 30px;">
     <p>
       As illustrated below, the matching process extracts bright sources to form triangular patterns, acting as geometric 'ciphers' to be cross-matched against modern star catalogs. Finding an exact match locks in the plate's precise coordinates. To ensure the success of this algorithm, our work focuses entirely on the vital preceding step: accurately classifying and distinguishing genuine stellar sources from plate artifacts.
     </p>
+  </div>
   </div>
 </section>
 
@@ -424,9 +432,11 @@
   <div class="container is-max-desktop">
     
     <h2 class="title is-3">Challenge</h2>
+    <div class="content has-text-justified is-size-5" style="margin-bottom: 30px;">
     <p>
       However, time has left its mark on these valuable records. Suboptimal early storage conditions and subsequent environmental deterioration have left many historical plates suffering from scratches, mold, emulsion degradation, and physical fractures. These defects severely complicate the reliable detection of genuine stellar sources, causing traditional computer software to fail during the astrometric matching process and resulting in thousands of uncalibrated plates.
     </p>
+    </div>
 
   </div>
 </section>
@@ -435,7 +445,9 @@
   <div class="container is-max-desktop">
     
     <h2 class="title is-3">Our work</h2>
-    <div class="content has-text-justified">
+    <!-- <div class="content has-text-justified"> -->
+      
+    <div class="content has-text-justified is-size-5" style="margin-bottom: 30px;">
       <p>
         In our work, we introduce a deep-learning-assisted framework to salvage heavily degraded astronomical plates. We developed a Transformer-based classification model that effectively learns to distinguish trustworthy stellar sources from spurious artifacts caused by dust or scratches. By training a base model and employing metadata-guided fine-tuning to adapt to specific observational conditions (such as different telescopes and exposure times), our AI-driven approach bypasses the limitations of traditional rules.
       </p>
@@ -448,17 +460,6 @@
   </div>
 </section>
 
-<section class="section" id="ImageComparison">
-  <div class="container is-max-desktop">
-    
-    <h2 class="title is-3">Result</h2>
-    <p>
-      In our work, we introduce a deep-learning-assisted framework to salvage heavily degraded astronomical plates. We developed a Transformer-based classification model that effectively learns to distinguish trustworthy stellar sources from spurious artifacts caused by dust or scratches. By training a base model and employing metadata-guided fine-tuning to adapt to specific observational conditions (such as different telescopes and exposure times), our AI-driven approach bypasses the limitations of traditional rules.
-    </p>
-
-  </div>
-</section>
-
 <section class="section" id="Results">
   <div class="container is-max-desktop">
     
@@ -466,7 +467,7 @@
     
     <div class="content has-text-justified is-size-5" style="margin-bottom: 30px;">
       <p>
-        Our AI-augmented pipeline was applied to <strong>1,883</strong> digitized historical plates that had previously failed astrometric registration using traditional methods. The results demonstrate the exceptional resilience of our deep learning framework against environmental deterioration[cite: 350]. 
+        Our AI-augmented pipeline was applied to <strong>1,883</strong> digitized historical plates that had previously failed astrometric registration using traditional methods. The results demonstrate the exceptional resilience of our deep learning framework against environmental deterioration.
       </p>
       <p>
         Through the combined use of our Base Model and metadata-guided Fine-Tuned Models, we successfully completed the astrometric registration for <strong>1,353</strong> of these challenging plates. Remarkably, the model maintained robust feature extraction even on severely degraded data, achieving success rates of nearly 68% for plates with visible mold, scratches, or minor detachment (Grade 2 and Grade 3 plates).
