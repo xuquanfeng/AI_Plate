@@ -74,7 +74,7 @@
 
 
   <!-- TODO: Replace with your paper title and authors -->
-  <title>AI_Plate - Xuquanfeng | RAA</title>
+  <title>AI_Plate - Xu Quanfeng | RAA</title>
   
   <!-- Favicon and App Icons -->
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
@@ -228,28 +228,6 @@
       </div>
     </div>
   </div>
-<!-- 
-<main id="main-content">
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Astrometric registration of Chinese historical Digital Plates with AI</h1>
-          <div class="is-size-5 publication-authors">
-                <span class="author-block">
-                  Page from</span>
-            <span class="author-block">
-              <a href="https://xuquanfeng.github.io/" target="_blank">Quanfeng Xu (徐权峰)</a>,</span>
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-
 
   <main id="main-content">
   <section class="hero">
@@ -264,21 +242,21 @@
               <span class="author-block">
                 <a href="https://xuquanfeng.github.io/" target="_blank">Quanfeng Xu (徐权峰)</a>,</span>
                   <span class="author-block">
-                    Zhengjun Shang (商正君)</a>,</span>
+                    Zhengjun Shang (商正君),</span>
                   <span class="author-block">
                     <a href="http://202.127.29.3/~shen/wiki/index.php/About_Me" target="_blank">Shiyin Shen (沈世银)</a><sup>*</sup>,</span>
                   <span class="author-block">
                     <a href="https://shao.cas.cn/sourcedb/zw/zjrck/201412/t20141227_4282643.html" target="_blank">Yong Yu (于涌)</a><sup>*</sup>,</span>
                 <span class="author-block">
-                  Meiting Yang (杨美婷)</a><sup>*</sup>,</span>
+                  Meiting Yang (杨美婷)<sup>*</sup>,</span>
                   <span class="author-block">
-                    Hao Luo (罗浩)</a>,</span>
+                    Hao Luo (罗浩),</span>
                   <span class="author-block">
-                    Jing Yang (杨静)</a>,</span>
+                    Jing Yang (杨静),</span>
                   <span class="author-block">
                     <a href="http://www.shao.cas.cn/sourcedb/zw/zjrck/200907/t20090723_2160293.html" target="_blank">Zhenghong Tang (唐正宏)</a>,</span>
                   <span class="author-block">
-                    <a href="http://202.127.29.3/~shen/wiki/index.php/About_Me" target="_blank">Jianhai Zhao (赵建海)</a>
+                    Jianhai Zhao (赵建海)
                   </span>
                   </div>
 
@@ -377,7 +355,11 @@
     <h2 class="title is-3">Background & Motivation</h2>
     <div class="content has-text-justified is-size-5" style="margin-bottom: 30px;">
     <p>
-      Astronomical plates are some of the most significant observational tools of twentieth-century astronomy, offering long-term sky surveys that modern surveys cannot match. Since 1900, China has systematically gathered nighttime astronomical plates, building a substantial historical dataset. Although these fragile materials have been digitized with high accuracy, they need to be astrometrically registered by cross-matching detected stellar sources with modern reference catalogs such as Gaia to be scientifically useful.
+      Astronomical plates are some of the most significant observational tools of twentieth-century astronomy,
+      offering long-term sky surveys that modern surveys cannot match.
+      Since 1900, China has systematically gathered nighttime astronomical plates, building a substantial historical dataset.
+      Although these fragile materials have been digitized with high accuracy,
+      they need to be astrometrically registered by cross-matching detected stellar sources with modern reference catalogs such as Gaia to be scientifically useful.
     </p>
   </div>
 
@@ -401,10 +383,38 @@
     
     <div class="content has-text-justified is-size-5" style="margin-bottom: 30px;">
     <p>
-      As illustrated below, the matching process extracts bright sources to form triangular patterns, acting as geometric 'ciphers' to be cross-matched against modern star catalogs. Finding an exact match locks in the plate's precise coordinates. To ensure the success of this algorithm, our work focuses entirely on the vital preceding step: accurately classifying and distinguishing genuine stellar sources from plate artifacts.
+      As illustrated below, the matching process extracts bright sources to form triangular patterns, acting as geometric 'ciphers' to be cross-matched against modern star catalogs.
+      Finding an exact match locks in the plate's precise coordinates.
+      To ensure the success of this algorithm, our work focuses entirely on the vital preceding step: accurately classifying and distinguishing genuine stellar sources from plate artifacts.
     </p>
   </div>
-  </div>
+  <div class="table-container" style="margin-top: 20px; margin-bottom: 40px;">
+  <table class="table is-striped is-hoverable is-fullwidth has-text-centered" style="background-color: #f8f9fa; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+    <thead style="background-color: #e9ecef;">
+      <tr>
+        <th class="has-text-centered has-text-dark">Status<br><span class="is-size-7 has-text-grey has-text-weight-normal">底片处理现状</span></th>
+        <th class="has-text-centered has-text-dark">Plate Count<br><span class="is-size-7 has-text-grey has-text-weight-normal">数量</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="vertical-align: middle;">
+          <strong>Calibrated by Traditional Methods</strong><br>
+          <span class="is-size-7 has-text-grey">已校准（由传统方法完成）</span>
+        </td>
+        <td class="is-size-4 has-text-weight-bold has-text-info" style="vertical-align: middle;">15,696</td>
+      </tr>
+      <tr>
+        <td style="vertical-align: middle;">
+          <strong>Failed by Traditional Methods</strong><br>
+          <span class="is-size-7 has-text-grey">待校准（传统方法失效，目前待解决）</span>
+        </td>
+        <td class="is-size-4 has-text-weight-bold has-text-danger" style="vertical-align: middle;">1,883</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
 </section>
 
 <section class="section" id="ImageComparison">
@@ -429,12 +439,11 @@
       <figcaption style="margin-top: 15px; text-align: justify; font-size: 0.95em; color: #555;">
         <h2 class="title is-4 has-text-centered" style="margin-bottom: 10px; color: #333;">Astronomical Digital Plate Image Calibration</h2>
         <strong style="font-weight: bold; color: #333;">Left (Raw Plate):</strong> The original historical digital plate.
-        <strong style="font-weight: bold; color: #333;">Right (DESI):</strong> Precisely locates genuine stellar sources for astrometric registration.
+        <strong style="font-weight: bold; color: #333;">Right (DESI):</strong> Precisely astrometric registration for modern sky surveys.
       </figcaption>
 
     </figure>
 
-  </div>
 </section>
 
 <section class="section" id="ImageComparison">
