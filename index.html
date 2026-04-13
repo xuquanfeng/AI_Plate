@@ -340,7 +340,8 @@
     <p>
       While modern astronomical telescopes serve as "digital cameras" capturing the universe, the astronomical plates from the last century are the "film rolls" that recorded the starry sky.
       Since 1900, Chinese astronomers have systematically collected a massive number of nighttime astronomical plates, forming a vast historical database.
-      Celestial phenomena such as supernova explosions and asteroid trajectories often span centuries; thus, these plates serve as a long-term time-domain astronomy research.
+      Plate records celestial phenomena such as supernova explosions and asteroid trajectories spanning centuries, serving as a long-term time-domain astronomy research.
+
     </p>
   </div>
   </div>
@@ -353,7 +354,7 @@
     
     <div class="content has-text-justified is-size-5" style="margin-bottom: 30px;">
     <p>
-      How do we find the precise coordinates of these century-old records? Imagine holding an ancient treasure map without latitude or longitude, showing only faint islands. To locate it, you would connect the clearest islands to form unique <strong>"geometric ciphers"</strong> (triangles or polygons) and scan them against a modern, highly precise "digital global map".
+      How do astronomers determine the precise coordinates of these century-old records? Historical plates often lack coordinate information, functioning much like ancient nautical charts without latitude and longitude. To pinpoint the specific sky area captured on a plate, astronomers extract clear stars as "landmarks" and use the unique geometric properties of the polygons they form to search for and cross-reference them in high-precision modern standard star catalogs (such as the Gaia catalog).
     </p>
     <figure style="margin: 0;">
       
@@ -379,8 +380,7 @@
 
     </figure>
     <p>
-      Because the relative positions of most stars change only minutely over decades (much like the subtle geological shifts of "landmarks" on our treasure map), astronomers correct these matches by factoring in the time elapsed and the stars' estimated proper motions.
-      Once successfully resolved against modern high-precision catalogs (like Gaia), the exact cosmic coordinates of the plate captured decades ago are perfectly locked in.
+      Since the relative positions of the vast majority of stars change only minutely over several decades, analogous to the subtle geological shifts of "landmarks" on a nautical chart, astronomers correct the matching by incorporating small shifts estimated from the elapsed time and the stars' proper motions. Upon successful resolution, the precise cosmic coordinates of the sky area photographed decades ago are perfectly locked in.
     </p>
     </div>
     
@@ -390,10 +390,8 @@
     
     <div class="content has-text-justified is-size-5" style="margin-bottom: 30px;">
     <p>
-      The astrometric registration of the digitized plates consists of three main steps: source extraction, stellar source classification, and astrometric matching.
-    </p>
-    <p>
-      To ensure the success of this algorithm, our work focuses entirely on the vital preceding step: accurately classifying and distinguishing genuine stellar sources from plate artifacts before the geometric matching begins.
+      The astrometric registration of these digitized plates consists of three main steps: source extraction, stellar source classification, and astrometric matching.
+      To ensure the success of the matching algorithm, our work focuses entirely on the vital preceding step: accurately classifying and distinguishing genuine stellar sources from plate artifacts before the geometric matching begins.
     </p>
   </div>
 </section>
@@ -403,10 +401,10 @@
     <h2 class="title is-3">The Challenge</h2>
     <div class="content has-text-justified is-size-5" style="margin-bottom: 30px;">
     <p>
-      However, the gifts of history often bear the scars of time. Limited by early storage conditions, many precious plates are covered with mold spots, scratches, or have even suffered physical fractures. 
+      However, the gifts of history often bear the scars of time. Due to early storage conditions, many plates are covered in mold spots, have scratches, or have even suffered physical fractures. 
     </p>
     <p>
-      Traditional computer algorithms are relatively rigid and struggle to distinguish between genuine starlight and scratches. They frequently misidentify mold spots as stellar point sources during the matching process, leading to the collapse of the registration system. Once a plate cannot be accurately located, all the scientific information it carries becomes completely invalid. Statistically, nearly two thousand highly valuable historical plates were deemed unsolvable by traditional methods due to severe degradation.
+      Traditional computer algorithms simply use all extracted signals directly for astrometric matching, indiscriminately mixing genuine stellar point sources with mold spots and scratches. This number of scratches frequently leads to the collapse of the registration system, and all the scientific information it carries becomes completely invalid. Statistically, nearly two thousand highly valuable historical plates were deemed unsolvable by traditional methods due to severe degradation.
     </p>
     </div>
     <div class="table-container" style="margin-top: 20px; margin-bottom: 40px;">
@@ -423,12 +421,19 @@
           <strong>Calibrated by Traditional Methods</strong><br>
           <span class="is-size-7 has-text-grey">已校准（由传统方法完成）</span>
         </td>
-        <td class="is-size-4 has-text-weight-bold has-text-info" style="vertical-align: middle;">15,696</td>
+        <td class="is-size-4 has-text-weight-bold has-text-info" style="vertical-align: middle;">13,512</td>
       </tr>
       <tr>
         <td style="vertical-align: middle;">
-          <strong>Failed by Traditional Methods</strong><br>
-          <span class="is-size-7 has-text-grey">待校准（传统方法失效，目前待解决）</span>
+          <strong>Calibrated by Machine learning Methods</strong><br>
+          <span class="is-size-7 has-text-grey">已校准（由机器学习方法完成）</span>
+        </td>
+        <td class="is-size-4 has-text-weight-bold has-text-info" style="vertical-align: middle;">2,184</td>
+      </tr>
+      <tr>
+        <td style="vertical-align: middle;">
+          <strong>Failed</strong><br>
+          <span class="is-size-7 has-text-grey">待校准（目前待解决）</span>
         </td>
         <td class="is-size-4 has-text-weight-bold has-text-danger" style="vertical-align: middle;">1,883</td>
       </tr>
@@ -444,13 +449,10 @@
     <h2 class="title is-3">Our work</h2>
     <div class="content has-text-justified is-size-5" style="margin-bottom: 30px;">
       <p>
-        Faced with this dilemma, the Shanghai Astronomical Observatory introduced deep learning technology to bring these degraded plates back to life.
-        Influenced by the optical systems of telescopes, authentic stars possess stable and unique "photometric profiles," whereas scratches and artifacts vary wildly.
-        We trained a dedicated image classification model based on the Transformer architecture, enabling it to combine local details with global context to precisely differentiate stellar point sources from scratches.
+        To address this challenge, researchers at the Shanghai Astronomical Observatory introduced a deep learning framework designed to restore the scientific utility of heavily degraded plates. Governed by telescope optics, genuine stars consistently exhibit stable photometric profiles, whereas scratches display highly irregular morphologies. Leveraging this physical distinction, we developed a dedicated image classification model based on the Transformer architecture. This model effectively synthesizes local pixel features with global visual context, enabling the precise differentiation of authentic stellar point sources from environmental noise.
       </p>
       <p>
-        To achieve optimal results, we adopted a tailored training strategy. First, we used well-preserved plates to train a "Base Model" equipped with fundamental recognition capabilities. Subsequently, addressing the complex plates taken by telescopes of varying apertures from different domestic observatories, we extracted physical features like exposure times and equipment parameters.
-        We then custom-built "Fine-tuned Models" specifically to conquer plates with poor preservation quality.
+        To optimize classification performance across heterogeneous datasets, we implemented a two-stage, metadata-guided training strategy. Initially, a "Base Model" was trained on well-preserved plates to establish robust baseline capabilities for stellar recognition. Subsequently, to account for the systematic variations introduced by different telescope apertures and exposure conditions across multiple observatories, we integrated these physical parameters into our workflow. This approach enabled the development of "Fine-Tuned Models" explicitly tailored to accurately process plates suffering from severe degradation.
       </p>
     </div>
     <figure class="has-text-centered" style="margin-top: 30px;">
@@ -470,14 +472,13 @@
       </p>
       <p>
         Through the combined use of our Base Model and metadata-guided Fine-Tuned Models, we successfully completed the astrometric registration for <strong>1,353</strong> of these challenging plates. Remarkably, the model maintained robust feature extraction even on severely degraded data, achieving success rates of nearly 68% for plates with visible mold, scratches, or minor detachment (Grade 2 and Grade 3 plates).
-        The model demonstrates strong resilience against moderate physical defects.
       </p>
     </div>
 
     <div class="columns is-centered has-text-centered" style="margin-top: 40px; margin-bottom: 40px; background-color: #f8f9fa; border-radius: 12px; padding: 30px 0;">
       
       <div class="column is-one-third">
-        <div class="is-size-1 has-text-weight-bold has-text-dark">1,883</div>
+        <div class="is-size-1 has-text-weight-bold has-text-danger">1,883</div>
         <div class="is-size-6 has-text-grey mt-2">Uncalibrated Plates<br>(Failed by Traditional Methods)</div>
       </div>
       
